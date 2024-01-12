@@ -58,6 +58,55 @@ p {
   align-items: center;
 }
 
+@media only screen and (max-width: 800px) {
+  body {
+    align-content: center;
+    overflow-x: hidden;
+  }
+  header {
+    overflow-x: hidden;
+    position: relative;
+  }
+  .photos_of_baton {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow {
+  display: inline-block;
+  margin-left: 10px;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+  font-size: xx-large;
+  font-weight: 600;
+  color: var(--ul--color);
+  text-decoration: none;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.arrow:hover {
+  animation-name: bounce;
+  animation-timing-function: ease;
+}
+
 @keyframes box_logo {
   0% {
     background-color: rgb(185, 103, 185);
@@ -564,53 +613,4 @@ p {
   border-radius: 50%;
   left: 1100px;
   top: 60px;
-}
-
-@media only screen and (max-width: 800px) {
-  body {
-    align-content: center;
-    overflow-x: hidden;
-  }
-  header {
-    overflow-x: hidden;
-    position: relative;
-  }
-  .photos_of_baton {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-
-footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.arrow {
-  display: inline-block;
-  margin-left: 10px;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  transform-origin: bottom;
-  font-size: xx-large;
-  font-weight: 600;
-  color: var(--ul--color);
-  text-decoration: none;
-}
-
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-.arrow:hover {
-  animation-name: bounce;
-  animation-timing-function: ease;
 }
