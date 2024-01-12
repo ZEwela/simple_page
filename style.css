@@ -1,3 +1,7 @@
+:root {
+  --ul--color: darkorchid;
+}
+
 body {
   background-color: azure;
 }
@@ -28,7 +32,7 @@ a {
 
 ol,
 ul {
-  color: darkorchid;
+  color: var(--ul--color);
   display: flex;
   justify-items: center;
   align-items: center;
@@ -591,7 +595,7 @@ footer {
   transform-origin: bottom;
   font-size: xx-large;
   font-weight: 600;
-  color: darkorchid;
+  color: var(--ul--color);
   text-decoration: none;
 }
 
